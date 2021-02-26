@@ -1,0 +1,14 @@
+<h1>Nearest Station to <%= @location %>: </h1>
+<h3><%= @nearest_station.name  %></h3>
+<h3><%= @nearest_station.address  %></h3>
+<h3><%= @nearest_station.fuel_type  %></h3>
+<h3><%= @nearest_station.access_times %></h3>
+
+
+<h4>Travel Time: <%= @directions.travel_time %> </h4>
+<h4>Travel Distance: <%= @directions.distance %> </h4>
+<ul>
+  <% @directions.steps.each do |direction| %>
+    <li><%= direction %></li>
+  <% end %>
+</ul>
